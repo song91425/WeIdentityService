@@ -1,0 +1,6 @@
+framework module WeIdentityService {
+  umbrella header "WeIdentityService-umbrella.h"
+
+  export *
+  module * { export * }
+}

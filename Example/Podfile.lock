@@ -1,0 +1,80 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - CocoaSecurity (1.2.4)
+  - Protobuf (3.11.4)
+  - SQLiteRepairKit (1.2.2):
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
+  - WCDB (1.0.7.5):
+    - SQLiteRepairKit (~> 1.2.0)
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
+  - WCDBOptimizedSQLCipher (1.2.1)
+  - WeIdentityService (0.2.0):
+    - WeIdentityService/Base (= 0.2.0)
+    - WeIdentityService/Payment (= 0.2.0)
+    - WeIdentityService/Restoration (= 0.2.0)
+    - WeIdentityService/WI (= 0.2.0)
+  - WeIdentityService/Base (0.2.0):
+    - AFNetworking (~> 4.0)
+    - CocoaSecurity
+    - WCDB
+    - YYModel
+  - WeIdentityService/Payment (0.2.0):
+    - WeIdentityService/Base
+  - WeIdentityService/Restoration (0.2.0):
+    - Protobuf
+    - WeIdentityService/Base
+    - WeIdentityService/Restoration/BinaryLib (= 0.2.0)
+  - WeIdentityService/Restoration/BinaryLib (0.2.0):
+    - Protobuf
+    - WeIdentityService/Base
+  - WeIdentityService/WI (0.2.0):
+    - WeIdentityService/Base
+    - WeIdentityService/WI/BinaryLib (= 0.2.0)
+  - WeIdentityService/WI/BinaryLib (0.2.0):
+    - WeIdentityService/Base
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - WeIdentityService (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - CocoaSecurity
+    - Protobuf
+    - SQLiteRepairKit
+    - WCDB
+    - WCDBOptimizedSQLCipher
+    - YYModel
+
+EXTERNAL SOURCES:
+  WeIdentityService:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
+  Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
+  SQLiteRepairKit: 35aaae5a8838adb85f5b1eb4d796055be6060a4b
+  WCDB: 8e90babdeb7784c569353a4bd22a66c0a175a882
+  WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
+  WeIdentityService: f41152eb4a631b04607587f6e262a10d01dc1815
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: b333cb2f44c437de488754aad4043bd6b85c8acd
+
+COCOAPODS: 1.10.1

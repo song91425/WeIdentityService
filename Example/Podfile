@@ -1,0 +1,16 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'WeIdentityService_Example' do
+  pod 'WeIdentityService', :path => '../'
+#  pod 'WCDB'
+#pod 'WeIdentityService', :git => 'git@github.com:openchopstick/WeIdentityService.git'
+#pod 'AFNetworking', '~> 4.0'
+
+  target 'WeIdentityService_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

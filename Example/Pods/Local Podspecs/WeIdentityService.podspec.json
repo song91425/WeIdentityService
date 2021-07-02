@@ -1,0 +1,105 @@
+{
+  "name": "WeIdentityService",
+  "version": "0.2.0",
+  "summary": "A short description of WeIdentityService.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/shoutanxie@gmail.com/WeIdentityService",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "shoutanxie@gmail.com": "shoutanxie@gmail.com"
+  },
+  "source": {
+    "git": "git@github.com:openchopstick/WeIdentityService.git",
+    "branch": "master"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "subspecs": [
+    {
+      "name": "Base",
+      "source_files": [
+        "WeIdentityService/Classes/Code/Base/**/*",
+        "WeIdentityService/Classes/Code/Suite/**/*"
+      ],
+      "public_header_files": [
+        "WeIdentityService/Classes/Code/Base/**/*.h",
+        "WeIdentityService/Classes/Code/Suite/**/*.h"
+      ],
+      "dependencies": {
+        "AFNetworking": [
+          "~> 4.0"
+        ],
+        "YYModel": [
+
+        ],
+        "CocoaSecurity": [
+
+        ],
+        "WCDB": [
+
+        ]
+      },
+      "libraries": "c++",
+      "compiler_flags": "-fno-modules"
+    },
+    {
+      "name": "WI",
+      "source_files": "WeIdentityService/Classes/Code/WI/**/*",
+      "public_header_files": "WeIdentityService/Classes/Code/WI/**/*.h",
+      "dependencies": {
+        "WeIdentityService/Base": [
+
+        ]
+      },
+      "libraries": "c++",
+      "pod_target_xcconfig": {
+        "ENABLE_BITCODE": "NO"
+      },
+      "subspecs": [
+        {
+          "name": "BinaryLib",
+          "vendored_libraries": "WeIdentityService/Classes/Lib/WeID/**/*.a",
+          "source_files": "WeIdentityService/Classes/Lib/WeID/**/*.h"
+        }
+      ]
+    },
+    {
+      "name": "Payment",
+      "dependencies": {
+        "WeIdentityService/Base": [
+
+        ]
+      },
+      "source_files": "WeIdentityService/Classes/Code/Payment/**/*",
+      "public_header_files": "WeIdentityService/Classes/Code/Payment/**/*.h"
+    },
+    {
+      "name": "Restoration",
+      "dependencies": {
+        "Protobuf": [
+
+        ],
+        "WeIdentityService/Base": [
+
+        ]
+      },
+      "source_files": "WeIdentityService/Classes/Code/Restoration/**/*",
+      "libraries": "c++",
+      "pod_target_xcconfig": {
+        "ENABLE_BITCODE": "NO",
+        "GCC_PREPROCESSOR_DEFINITIONS": "GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1 "
+      },
+      "subspecs": [
+        {
+          "name": "BinaryLib",
+          "vendored_libraries": "WeIdentityService/Classes/Lib/HDWallet/**/*.a",
+          "source_files": "WeIdentityService/Classes/Lib/HDWallet/**/*.h"
+        }
+      ]
+    }
+  ]
+}
